@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/* ====== noto snas 웹 폰트 ====== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* ====== 공통 사용 변수 ====== */
+:root{
+  --colorMain: #333;
+  --color1:#000;
+  --color2:#7c7c7c;
+  --color3:#fff;
+  --base_font_size: 12px;
+  --base_font_family: 'Noto Sans KR', arial, sans-serif;
+}
+
+/* ====== 공통서식 ====== */
+/* [1] 글자 서식 */
+body{
+  font-family: var(--base_font_family);
+  font-size: var(--base_font_size);
+  color: var(--colorMain);
+}
+/* [2] 링크서식 */
+a{
+  font-family: var(--base_font_family);
+  font-size: var(--base_font_size);
+  text-decoration: none;
+  color: var(--colorMain);
+}
+
+
+/* ====== 서브페이지 공통 ui 서식 ====== */
+/* [1] 버튼 */
+  /* 전체메뉴, 장바구니 */
+.toggle_btn, .cart_btn{
+  position: absolute; top: 13px; /*기준: header*/
+  cursor: pointer;
+}
+.toggle_btn{left: 14px; background: none; border: none;}
+.cart_btn{right: 14px;}
+.toggle_btn img, .cart_btn img{width: 36px;}
+  /* 닫기버튼 */
+.close_btn{
+  background: none;
+  border: none;
+  position: absolute; top: 20px; left: 5%; /*기준: header*/
+  cursor: pointer;
+}
+
+/* [2] 모바일 네비게이션 */
+.navi{
+  background: var(--color1); 
+  width: 100%; height: 100%;
+  position: fixed; top: 0px; left: -100%;
+  z-index: 1000;
+  transition: 0.3s;
+}
+.gnb{
+  width: 90%;
+  margin: 80px auto 0px auto;
+}
+.gnb > li{
+  line-height: 44px;
+  border-top: 1px solid var(--color2);
+  text-indent: 10px;
+}
+.gnb > li > a{
+  color: var(--color3);
+  font-size: 1rem;
+  display: block;
+  transition: 0.3s;
+}
+.gnb > li > a:hover{background: var(--color2);}
+.form_nav{
+  width: 90%; margin: 30px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form_nav li{
+  width: 48.74%; line-height: 40px;
+  display: inline-block;
+  background-color: var(--colorMain);
+  margin: 1px 0.20%;
+  text-align: center;
+  transition: 0.3s;
+}
+.form_nav li a{
+  color: var(--color3);
+  font-size: 0.92rem;
+  display: block;
+}
+.form_nav li:hover{background: var(--color2);}
+
+.member_info{
+  color: var(--color3);
+  text-align: right;
+  font-size: 1.1rem;
+
+}
+
+/* [3] 로그인/회원가입 */
+.title01{
+  font-size: 1.5rem;
+  width: 100%;
+  background: #ccc;
+  padding: 1.25rem;
+  text-align: center;
+}
+.hiddenLabel{display: none;}
+.loginWrap {padding: 0.625rem; box-sizing: border-box;}
+
+input[type=text], input[type=password], .loginBtn{
+  display: block;
+  margin: 0.7rem auto;
+  width: 100%; box-sizing: border-box;
+  padding: 0.5rem;
+  background: var(--color3);
+}
+
+.usernameCheck:hover label{text-decoration: underline;}
+.usernameCheck input{width: 1rem; cursor: pointer;}
+.usernameCheck label{font-size: 0.8rem; cursor: pointer;}
+
+.loginBtn{
+  border: 3px solid rgb(231, 17, 17);
+  background: rgb(231, 17, 17);
+  color: var(--color3);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.loginBtn:hover {filter: brightness(1.2);}
+
+.findWrap{
+  display: flex; justify-content: center;
+  gap: 1rem;
+  padding: 0.58rem;
+}
+.findWrap a:hover{text-decoration: underline;}
+
+/* [] input */
+/* [] 메뉴 */
+
