@@ -30,7 +30,8 @@ function Join(props) {
 
   // [4] 아이디 중복 체크
   const checkUsername =()=> {
-    axios.post('http://localhost:9070/check-username', {
+    //axios.post('http://localhost:9070/check-username', {
+    axios.post('https://port-0-backend2026-mkumigxw608a3e4b.sel3.cloudtype.app/check-username', {
       username:form.username
     })
     .then(res=>{
@@ -50,7 +51,8 @@ function Join(props) {
       return;
     }
 
-    axios.post('http://localhost:9070/register', form) // 비밀번호일치시 서버측으로 내용 전송
+    //axios.post('http://localhost:9070/register', form) // 비밀번호일치시 서버측으로 내용 전송
+    axios.post('https://port-0-backend2026-mkumigxw608a3e4b.sel3.cloudtype.app/register', form) // 비밀번호일치시 서버측으로 내용 전송
     .then(()=> {
       alert('회원가입 완료. 로그인 페이지로 이동');
       navigate('/login');
@@ -128,5 +130,6 @@ function Join(props) {
     </main>
   )
 }
+
 
 export default Join
