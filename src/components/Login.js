@@ -26,7 +26,8 @@ function Login(props) {
   const handleSubmit =(e)=> { // 입력data를 back서버에 post방식으로 전송
     e.preventDefault();
 
-    axios.post('http://localhost:9070/login', form)
+    //axios.post('http://localhost:9070/login', form)
+    axios.post('https://port-0-backend2026-mkumigxw608a3e4b.sel3.cloudtype.app/login', form)
     .then(res => {
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('username', form.username);
@@ -97,5 +98,6 @@ function Login(props) {
     </main>
   )
 }
+
 
 export default Login
